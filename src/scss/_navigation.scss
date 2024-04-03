@@ -12,6 +12,13 @@
     top: 20px;
     width: 120px;
   }
+  
+  @media (min-width: 1280px) {
+    height: 100px;
+    right: 20px;
+    top: 20px;
+    width: 100px;
+  }
 
   &:hover {
     cursor: pointer;

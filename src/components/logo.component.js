@@ -6,12 +6,12 @@ const Logo = () => {
 
   if (logo) {
     gsap.to(logo, {
-      duration: 2,
+      duration: 4,
       delay: .50,
       // scale: 1,
       opacity: 1,
-      width: '80%',
-      ease: 'power4.out'
+      width: '85%',
+      ease: 'elastic.out'
     });
   }
 }
