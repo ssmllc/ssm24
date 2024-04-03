@@ -1,0 +1,160 @@
+.ssm-footer {
+  background: linear-gradient(to right, var(--cyan) 0%, var(--magenta) 25%, var(--magenta) 75%, var(--yellow) 100%);
+  border-radius: 100px 100px 0 0;
+  // outline: 10px solid red;
+  bottom: 15vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  // height: 80vh;
+  position: relative;
+  gap: 100px;
+  width: 100vw;
+  z-index: 5;
+
+  @media (min-width: 1280px) {
+    height: 50vh;
+    // bottom: -37vh;
+  }
+
+  &::after {
+    // outline: 10px solid red;
+    background: var(--black);
+    border-radius: 100px 100px 0 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 15px;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  &--contact {
+    align-self: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 70px auto 25px;
+    padding: 0;
+    position: relative;
+    width: 75%;
+    z-index: 10;
+
+    @media (min-width: 1280px) {
+      flex-direction: row;
+    }
+
+    &_wrapper {
+      // border: thin solid blue;
+      display: flex;
+      margin: 50px 0;
+      padding-left: 0;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        margin: 75px 0;
+      }
+
+      @media (min-width: 1280px) {
+        margin: 0;
+        padding-left: 15%;
+      }
+    }
+
+    &_copyright {
+      // border: thin solid red;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+
+      .ssm-logo--svg {
+        margin: 0 auto;
+        width: 80%;
+
+        @media (min-width: 1280px) {
+          margin: 0;
+          width: 100%;
+        }
+      }
+      
+      // display: flex;
+      // flex-direction: column;
+      // margin: 0 auto;
+      // width: 65%;
+
+      @media (min-width: 1280px) {
+        margin: 0;
+        width: 30%;
+      }
+    }
+    
+    &_company {
+      font-size: 12px;
+      margin: 20px 0 0;
+
+      @media (min-width: 1280px) {
+        font-size: 14px;
+      }
+    }
+
+    &_links {
+      display: flex;
+      // border: thin solid red;
+      color: var(--white);
+      text-transform: uppercase;
+      width: 50%;
+      justify-content: center;
+
+      a {
+        color: var(--white);
+        text-decoration: none;
+        transition: all .25s ease-out;
+
+        &:hover {
+          color: var(--cyan);
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        // border: thin solid red;
+        padding: 0 25px;
+        width: 100%;
+      }
+
+      .header {
+        @include EuropaBold;
+        border-bottom: thin solid #5e5e5e;
+        font-size: 16px;
+        padding-bottom: 15px;
+        letter-spacing: 2px;
+
+        @media (min-width: 768px) {
+          font-size: 28px;
+        }
+        
+        @media (min-width: 1280px) {
+          font-size: 16px;
+        }
+      }
+      
+      .link {
+        font-size: 12px;
+        letter-spacing: 2px;
+        padding: 20px 0 0;
+
+        @media (min-width: 768px) {
+          font-size: 24px;
+        }
+        
+        @media (min-width: 1280px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

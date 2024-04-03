@@ -1,0 +1,138 @@
+.ssm-exit--menu {
+  // border: thin solid red;
+  height: 80px;
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  width: 80px;
+  
+  @media (min-width: 768px) {
+    height: 120px;
+    right: 20px;
+    top: 20px;
+    width: 120px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &_label {
+    color: var(--black);
+    font-size: 12px;
+    font-weight: bold;
+    left: 50%;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    z-index: 100;
+  }
+
+  @keyframes rotateBlob {
+    from {
+      rotate: 0;
+    }
+  
+    to {
+      rotate: 360deg;
+    }
+  }
+
+  #sw-js-blob-svg {
+    animation: rotateBlob 7s linear infinite forwards;
+    height: 100%;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+  }
+}
+
+.ssm-navigation {
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 75px 15px;
+  position: fixed;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 20;
+
+  @media (min-width: 1280px) {
+    background: 0;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    position: relative;
+    height: auto;
+    width: 550px;
+    z-index: 2;
+  }
+  
+  &--button {
+    background: 
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(60deg, var(--black), var(--black)) border-box;
+    border: 3px solid transparent;
+    border-radius: 25px;
+    color: var(--white);
+    font-size: 12px;
+    letter-spacing: 2px;
+    outline: 0;
+    margin: 10px 0;
+    padding: 20px 25px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all .25s ease-out;
+
+    @media (min-width: 1280px) {
+      flex-grow: 1;
+      margin: 0;
+      padding: 15px 25px;
+    }
+
+    &.contact {
+      background: 
+        linear-gradient(#000, #000) padding-box,
+        linear-gradient(60deg, var(--cyan), var(--magenta)) border-box;
+      border: 3px solid transparent;
+      border-radius: 25px;
+      color: var(--white);
+
+      &:hover {
+        cursor: pointer;
+        color: var(--cyan);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: var(--cyan);
+
+      background: 
+        linear-gradient(#000, #000) padding-box,
+        linear-gradient(60deg, var(--cyan), var(--magenta)) border-box;
+      border: 3px solid transparent;
+      border-radius: 25px;
+    }
+
+    &[data-active='true'] {
+      background: 
+        linear-gradient(#000, #000) padding-box,
+        linear-gradient(60deg, var(--cyan), var(--magenta)) border-box;
+      border: 3px solid transparent;
+      border-radius: 25px;
+    }
+  }
+}

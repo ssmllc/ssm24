@@ -1,2 +1,2 @@
-# ssm24
-ssm24
+# webpacktemplate
+webpacktemplate

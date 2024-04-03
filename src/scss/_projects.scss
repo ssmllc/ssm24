@@ -1,0 +1,119 @@
+.ssm-projects {
+  // border: thin dashed red;
+  bottom: -100%;
+  padding: 25px;
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  z-index: 2;
+
+  &--wrapper {
+    // border: thin dashed white;
+    height: 450px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+  }
+  
+  &--slider {
+    // border: thin dashed green;
+    display: flex;
+    height: 100%;
+    // width: 2750px;
+    width: 2000px;
+    padding: 25px 0;
+    gap: 20px;
+    left: 0;
+    position: absolute;
+
+    @media (min-width: 1280px) {
+      left: 35.5%;
+    }
+  }
+
+  &--preview {
+    align-items: end;
+    background: rgba(50, 50, 50, .60);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35);
+    border-radius: 15px;
+    color: var(--white);
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    transition: all .35s ease-out;
+
+    &:hover {
+      box-shadow: inset 0 0 0 3px cyan;
+    }
+
+    &:nth-child(1) {
+      background: url('../assets/eightfold.png') top center no-repeat;
+      background-size: cover;
+    }
+    
+    &:nth-child(2) {
+      background: url('../assets/stellco.png') top center no-repeat;
+      background-size: cover;
+    }
+    
+    &:nth-child(3) {
+      background: url('../assets/beignetspot.png') top center no-repeat;
+      background-size: cover;
+    }
+    
+    &:nth-child(4) {
+      background: url('../assets/jrileyspirits.png') top center no-repeat;
+      background-size: cover;
+    }
+
+    &[data-active='true'] {
+      height: 100%;
+    }
+    
+    &[data-active='false'] {
+      // height: 50%;
+    }
+  }
+
+  &--current {
+    align-items: center;
+    border: thin solid rgba($color: #fff, $alpha: .50);
+    color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    font-size: 18px;
+    gap: 25px;
+    width: 220px;
+    padding: 15px 25px;
+    text-align: center;
+
+    &_progress {
+      background: cyan;
+      display: inline-block;
+      height: 1px;
+      width: 100px;
+    }
+  }
+
+  &--controller {
+    bottom: -50px;
+    display: flex;
+    gap: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .ssm-button--next,
+    .ssm-button--prev {
+      background: 0;
+      border: 1px solid rgba($color: #fff, $alpha: .50);
+      border-radius: 15px;
+      padding: 15px 20px;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
