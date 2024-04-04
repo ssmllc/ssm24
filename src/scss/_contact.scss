@@ -126,7 +126,7 @@
 
       @media (min-width: 1280px) {
         display: flex;
-        padding: 0.1rem;
+        padding: 0rem;
       }
 
       &::before {
@@ -135,7 +135,7 @@
         content: "";
         height: 4rem;
         transform: scale(0);
-        width: 10rem;
+        width: 100%;
       }
   
       &:checked {

@@ -9,8 +9,6 @@
 
   @media (min-width: 1280px) {
     background-position: 0 50%;
-    // background: 0;
-    // background-size: unset;
     position: fixed;
     left: 0;
     top: 0;
@@ -20,18 +18,15 @@
   .ssm-logo {
     // border: thin solid green;
     opacity: 0;
-    // margin: 50px auto;
-    // padding: 25px 0;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    // scale: 1;
     width: 110%;
 
     @media (min-width: 1280px) {
       margin: 0 auto;
-      padding: 50px 50px;
+      padding: 25px 0 0;
     }
   }
 }
