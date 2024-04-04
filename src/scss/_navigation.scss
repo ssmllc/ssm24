@@ -3,8 +3,9 @@
   height: 80px;
   right: 10px;
   top: 10px;
-  position: absolute;
+  position: fixed;
   width: 80px;
+  z-index: 100;
   
   @media (min-width: 768px) {
     height: 120px;
@@ -59,7 +60,7 @@
 
 .ssm-navigation {
   background: var(--black);
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 10px;
   height: 100vh;

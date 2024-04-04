@@ -52,6 +52,7 @@ ScrollSmoother.create({
 
     if (isOpen === 'false') {
       gsap.to(getElement('.ssm-navigation'), {
+        display: 'flex',
         opacity: 1,
         duration: 1,
         ease: 'power1.out'
@@ -62,7 +63,8 @@ ScrollSmoother.create({
       gsap.to(getElement('.ssm-navigation'), {
         opacity: 0,
         duration: 1,
-        ease: 'power1.out'
+        ease: 'power1.out',
+        display: 'none'
       });
       getElement('.ssm-exit--menu_label').innerText = "Menu";
       getElement('.ssm-exit--menu').setAttribute('data-active', 'false');

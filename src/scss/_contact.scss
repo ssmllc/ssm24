@@ -54,7 +54,7 @@
       border: 0;
       border-bottom: 1px solid rgba(0, 0, 0, .90);
       font-size: 16px;
-      height: 50px;
+      height: 100%;
       outline: 0;
       margin: 0;
       padding: 20px 0 0 10px;
@@ -111,14 +111,15 @@
     input[type="checkbox"], input[type="radio"] {
       align-content: center;
       appearance: none;
-      border: 0.25rem solid var(--black);
+      -webkit-appearance: none;
+      border: .25rem solid var(--black);
       border-radius: 3rem;
       display: inline-block;
       font-size: 2rem;
+      height: 65px;
       justify-content: center;
-      padding: 25px 65px;
+      padding: 0;
       width: 100%;
-      -webkit-appearance: none;
   
       @media (min-width: 768px) {
         padding: 40px 65px;
@@ -130,10 +131,11 @@
       }
 
       &::before {
+        display: block;
         background-color: rgba(0, 0, 0, .10);
         border-radius: 3rem;
         content: "";
-        height: 4rem;
+        height: 100%;
         transform: scale(0);
         width: 100%;
       }
@@ -191,7 +193,7 @@
   
     label {
       color: var(--black);
-      font-size: 12px;
+      font-size: 14px;
       left: 50%;
       position: absolute;
       top: 50%;
