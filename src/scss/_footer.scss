@@ -1,20 +1,21 @@
 .ssm-footer {
   background: linear-gradient(to right, var(--cyan) 0%, var(--magenta) 25%, var(--magenta) 75%, var(--yellow) 100%);
   border-radius: 100px 100px 0 0;
-  // outline: 10px solid red;
   bottom: 15vh;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  // height: 80vh;
   position: relative;
   gap: 100px;
   width: 100vw;
   z-index: 5;
 
+  @media (min-width: 360px) {
+    bottom: 10vh;
+  }
+
   @media (min-width: 1280px) {
     height: 50vh;
-    // bottom: -37vh;
   }
 
   &::after {

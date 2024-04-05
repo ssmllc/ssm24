@@ -71,7 +71,7 @@
   opacity: 0;
   top: 0;
   width: 100vw;
-  z-index: 20;
+  z-index: 30;
 
   @media (min-width: 1280px) {
     background: 0;
@@ -80,12 +80,14 @@
     justify-content: space-between;
     flex-direction: row;
     gap: 10px;
+    height: auto;
+    left: 50%;
     margin: 0 auto;
     padding: 20px 20px;
-    position: relative;
-    height: auto;
+    position: fixed;
+    transform: translateX(-50%);
     width: 550px;
-    z-index: 2;
+    z-index: 30;
   }
   
   &--button {
@@ -108,20 +110,6 @@
       flex-grow: 1;
       margin: 0;
       padding: 15px 25px;
-    }
-
-    &.contact {
-      background: 
-        linear-gradient(#000, #000) padding-box,
-        linear-gradient(60deg, var(--cyan), var(--magenta)) border-box;
-      border: 3px solid transparent;
-      border-radius: 25px;
-      color: var(--white);
-
-      &:hover {
-        cursor: pointer;
-        color: var(--cyan);
-      }
     }
 
     &:hover {

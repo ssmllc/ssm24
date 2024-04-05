@@ -6,6 +6,33 @@ import { ScrollToPlugin } from "gsap/all";
 
 gsap.registerPlugin(ScrollToPlugin);
 
+const toggleMenu = () => {
+  const navigationMenu = getElement('.ssm-navigation');
+  navigationMenu.setAttribute('data-active', 'false');
+
+  const isOpen = getElement('.ssm-exit--menu').getAttribute('data-active');
+
+  if (isOpen === 'false') {
+    gsap.to(getElement('.ssm-navigation'), {
+      display: 'flex',
+      opacity: 1,
+      duration: 1,
+      ease: 'power1.out'
+    });
+    getElement('.ssm-exit--menu_label').innerText = "Close";
+    getElement('.ssm-exit--menu').setAttribute('data-active', 'true');
+  } else {
+    gsap.to(getElement('.ssm-navigation'), {
+      opacity: 0,
+      duration: 1,
+      ease: 'power1.out',
+      display: 'none'
+    });
+    getElement('.ssm-exit--menu_label').innerText = "Menu";
+    getElement('.ssm-exit--menu').setAttribute('data-active', 'false');
+  }
+}
+
 const Navigation = () => {
   const ssmNavigation = CreateComponent({
     elementType: 'div',
@@ -45,21 +72,24 @@ const Navigation = () => {
   ssmNavigation.appendChild(ssmNavigationAboutButton);
   ssmNavigation.appendChild(ssmNavigationContactButton);
 
-  getElement('.ssm-banner').prepend(ssmNavigation);
+  getElement('body').appendChild(ssmNavigation);
 
   const buttonServices = getElement('.ssm-navigation--button.services');
   buttonServices.addEventListener('click', () => {
     gsap.to(window, { duration: 1, scrollTo: { y: "#services", offsetY: 150 } });
+    toggleMenu();
   });
 
   const buttonAbout = getElement('.ssm-navigation--button.about');
   buttonAbout.addEventListener('click', () => {
     gsap.to(window, { duration: 1, scrollTo: { y: "#about", offsetY: -150 } });
+    toggleMenu();
   });
 
   const buttonContact = getElement('.ssm-navigation--button.contact');
   buttonContact.addEventListener('click', () => {
     gsap.to(window, { duration: 1, scrollTo: { y: "#contact", offsetY: 375 } });
+    toggleMenu();
   });
 }
 

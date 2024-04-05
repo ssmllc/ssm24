@@ -9,7 +9,7 @@
 
   @media (min-width: 1280px) {
     background-position: 0 50%;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     padding-top: 0;
@@ -34,18 +34,6 @@
 .ssm-logo--svg {
   fill: var(--white);
   width: 100%;
-}
-
-.ssm-overlay {
-  background: rgba(0, 0, 0, .90);
-  height: 100vh;
-  display: none;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
 }
 
 .ssm-parallax {
