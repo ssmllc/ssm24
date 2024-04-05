@@ -3,10 +3,45 @@ import { getElement } from "./utils";
 
 let showProjects = false;
 
+const toggleProjectsOverlay = () => {
+  if (isVisible && showProjects) {
+    gsap.to('.ssm-projects', {
+      duration: 1,
+      ease: 'power4.out',
+      bottom: '-100%',
+    });
+
+    overlay && gsap.to(overlay, {
+      duration: 1,
+      ease: 'power4.out',
+      opacity: 0,
+    });
+
+    overlay && gsap.to(overlay, { display: 'none' });
+
+    getElement('.ssm-navigation--button.projects').setAttribute('data-active', 'false');
+    isVisible = false;
+    showProjects = false;
+  }
+}
+
 const ShowOverlay = () => {
   let isVisible = false;
 
   const overlay = getElement('.ssm-overlay');
+  const hideProjectsButton = getElement('.ssm-projects--hide');
+
+  if (!isVisible) {
+    overlay && gsap.to(overlay, { display: 'block' });
+
+    overlay && gsap.to(overlay, {
+      duration: 1,
+      ease: 'power4.out',
+      opacity: 1,
+    });
+
+    isVisible = true;
+  }
 
   overlay.addEventListener('click', () => {
     if (isVisible && showProjects) {
@@ -30,17 +65,27 @@ const ShowOverlay = () => {
     }
   });
 
-  if (!isVisible) {
-    overlay && gsap.to(overlay, { display: 'block' });
+  hideProjectsButton.addEventListener('click', () => {
+    if (isVisible && showProjects) {
+      gsap.to('.ssm-projects', {
+        duration: 1,
+        ease: 'power4.out',
+        bottom: '-100%',
+      });
 
-    overlay && gsap.to(overlay, {
-      duration: 1,
-      ease: 'power4.out',
-      opacity: 1,
-    });
+      overlay && gsap.to(overlay, {
+        duration: 1,
+        ease: 'power4.out',
+        opacity: 0,
+      });
 
-    isVisible = true;
-  }
+      overlay && gsap.to(overlay, { display: 'none' });
+
+      getElement('.ssm-navigation--button.projects').setAttribute('data-active', 'false');
+      isVisible = false;
+      showProjects = false;
+    }
+  });
 }
 
 const ProjectsSlider = () => {
