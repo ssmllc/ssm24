@@ -3,45 +3,11 @@ import { getElement } from "./utils";
 
 let showProjects = false;
 
-const toggleProjectsOverlay = () => {
-  if (isVisible && showProjects) {
-    gsap.to('.ssm-projects', {
-      duration: 1,
-      ease: 'power4.out',
-      bottom: '-100%',
-    });
-
-    overlay && gsap.to(overlay, {
-      duration: 1,
-      ease: 'power4.out',
-      opacity: 0,
-    });
-
-    overlay && gsap.to(overlay, { display: 'none' });
-
-    getElement('.ssm-navigation--button.projects').setAttribute('data-active', 'false');
-    isVisible = false;
-    showProjects = false;
-  }
-}
-
 const ShowOverlay = () => {
   let isVisible = false;
 
   const overlay = getElement('.ssm-overlay');
   const hideProjectsButton = getElement('.ssm-projects--hide');
-
-  if (!isVisible) {
-    overlay && gsap.to(overlay, { display: 'block' });
-
-    overlay && gsap.to(overlay, {
-      duration: 1,
-      ease: 'power4.out',
-      opacity: 1,
-    });
-
-    isVisible = true;
-  }
 
   overlay.addEventListener('click', () => {
     if (isVisible && showProjects) {
@@ -86,6 +52,18 @@ const ShowOverlay = () => {
       showProjects = false;
     }
   });
+
+  if (!isVisible) {
+    overlay && gsap.to(overlay, { display: 'block' });
+
+    overlay && gsap.to(overlay, {
+      duration: 1,
+      ease: 'power4.out',
+      opacity: 1,
+    });
+
+    isVisible = true;
+  }
 }
 
 const ProjectsSlider = () => {
@@ -97,8 +75,6 @@ const ProjectsSlider = () => {
   const offset = 15;
   const delta = sliderProject && (sliderProject.getBoundingClientRect().width) + offset;
   let counter = 0;
-
-  // console.log('delta', delta);
 
   projectsButton && projectsButton.addEventListener('click', () => {
     if (!showProjects) {
@@ -134,7 +110,6 @@ const ProjectsSlider = () => {
       document.querySelector('.ssm-projects--current_start').innerHTML = '01';
     } else {
       counter--;
-      // console.log('counter', counter);
       document.querySelector('.ssm-projects--current_start').innerHTML = `0${counter + 1}`;
     }
 
