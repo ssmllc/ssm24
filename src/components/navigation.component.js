@@ -74,6 +74,11 @@ const Navigation = () => {
 
   getElement('body').appendChild(ssmNavigation);
 
+  const buttonProjects = getElement('.ssm-navigation--button.projects');
+  buttonProjects.addEventListener('click', () => {
+    toggleMenu();
+  });
+
   const buttonServices = getElement('.ssm-navigation--button.services');
   buttonServices.addEventListener('click', () => {
     gsap.to(window, { duration: 1, scrollTo: { y: "#services", offsetY: 150 } });
