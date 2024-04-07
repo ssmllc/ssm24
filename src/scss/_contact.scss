@@ -177,7 +177,16 @@
   }
 
   &--service-budget_label {
+    font-size: 14px;
     margin: 15px 0 10px 10px;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+    
+    @media (min-width: 1280px) {
+      font-size: 14px;
+    }
   }
 }
 

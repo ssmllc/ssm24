@@ -10,7 +10,7 @@ const Logo = () => {
       delay: .50,
       // scale: 1,
       opacity: 1,
-      width: '80%',
+      width: '75%',
       ease: 'elastic.out'
     });
   }
