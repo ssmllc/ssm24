@@ -36,6 +36,14 @@
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     z-index: 100;
+
+    @media (min-width: 760px) {
+      font-size: 18px;
+    }
+    
+    @media (min-width: 1280px) {
+      font-size: 12px;
+    }
   }
 
   @keyframes rotateBlob {
@@ -72,6 +80,14 @@
   top: 0;
   width: 100vw;
   z-index: 30;
+
+  @media (min-width: 360px) {
+    padding: 150px 15px;
+  }
+  
+  @media (min-width: 768px) {
+    padding: 200px 15px;
+  }
 
   @media (min-width: 1280px) {
     background: 0;

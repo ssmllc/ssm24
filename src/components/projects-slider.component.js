@@ -84,6 +84,17 @@ const ProjectsSlider = () => {
         ease: 'power4.out',
         bottom: '100px',
       });
+
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 400px)", () => {
+        gsap.to('.ssm-projects', {
+          delay: .5,
+          duration: 1,
+          ease: 'power4.out',
+          bottom: '125px',
+        });
+      });
     }
 
     ShowOverlay();
@@ -101,7 +112,7 @@ const ProjectsSlider = () => {
       document.querySelector('.ssm-projects--current_start').innerHTML = `0${counter + 1}`;
     }
     gsap.to(slider, {
-      x: `-${(505 / 2000 * 100) * counter}%`
+      x: `-${delta * counter}px`
     });
   });
 
