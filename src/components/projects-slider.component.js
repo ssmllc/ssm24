@@ -73,7 +73,6 @@ const ProjectsSlider = () => {
   const next = getElement('.ssm-button--next');
   const prev = getElement('.ssm-button--prev');
   const offset = 15;
-  const delta = sliderProject && (sliderProject.getBoundingClientRect().width) + offset;
   let counter = 0;
 
   projectsButton && projectsButton.addEventListener('click', () => {
@@ -105,6 +104,8 @@ const ProjectsSlider = () => {
   });
 
   next && next.addEventListener('click', () => {
+    const delta = sliderProject && (sliderProject.getBoundingClientRect().width) + offset;
+
     if (counter >= 3) {
       document.querySelector('.ssm-projects--current_start').innerHTML = '04';
     } else {
@@ -118,6 +119,8 @@ const ProjectsSlider = () => {
   });
 
   prev && prev.addEventListener('click', () => {
+    const delta = sliderProject && (sliderProject.getBoundingClientRect().width) + offset;
+    
     if (counter <= 0) {
       document.querySelector('.ssm-projects--current_start').innerHTML = '01';
     } else {
