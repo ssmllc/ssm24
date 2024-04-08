@@ -79,6 +79,7 @@ const ProjectsSlider = () => {
   projectsButton && projectsButton.addEventListener('click', () => {
     if (!showProjects) {
       gsap.to('.ssm-projects', {
+        display: 'flex',
         delay: .5,
         duration: 1,
         ease: 'power4.out',
