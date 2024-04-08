@@ -31,6 +31,11 @@
     @media (min-width: 1280px) {
       margin: 20% auto 0;
     }
+    
+    @media (min-width: 1900px) {
+      margin: 15% auto 0;
+      width: 55%;
+    }
 
     &_text {
       @include EuropaBold;
@@ -128,7 +133,12 @@
     }
     
     @media (min-width: 1280px) {
+      padding: 0 25px 0 0;
       width: 65%;
+    }
+    
+    @media (min-width: 1900px) {
+      width: 55%;
     }
 
     &_wrapper {
