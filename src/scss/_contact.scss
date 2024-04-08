@@ -44,6 +44,11 @@
       padding: 50px  0 250px;
       width: 65%;
     }
+    
+    @media (min-width: 1900px) {
+      padding: 50px  0 250px;
+      width: 55%;
+    }
 
     h2 {
       font-size: 42px;
@@ -222,6 +227,13 @@
     display: flex;
     justify-content: space-between;
     margin: 50px 0;
+    position: relative;  
+  }
+  
+  @media (min-width: 1900px) {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
     position: relative;  
   }
 
