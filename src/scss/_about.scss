@@ -10,7 +10,7 @@
   z-index: 5;
 
   &--label {
-    color: var(--offwhite);
+    color: var(--white);
     font-size: 18px;
     margin-left: 10px;
   }
@@ -126,6 +126,10 @@
     @media (min-width: 1024px) {
       width: 75%;
     }
+    
+    @media (min-width: 1280px) {
+      width: 65%;
+    }
 
     &_wrapper {
       // border: thin solid red;
@@ -133,7 +137,8 @@
       width: 100%;
 
       @media (min-width: 1280px) {
-        width: 60%;
+        display: flex;
+        width: 100%;
       }
     }
     
@@ -154,16 +159,24 @@
       @media (min-width: 768px) {
         font-size: 18px;
         margin: 25px 0 35px;
-        padding: 15px 0;
-        width: 175px;
+        padding: 12px 0;
+        width: 150px;
+      }
+      
+      @media (min-width: 1280px) {
+        font-size: 18px;
+        margin: 0 0 10px 0;
+        padding: 12px 0;
+        width: 150px;
       }
     }
     
     &_copy {
-      color: var(--offwhite);
+      color: var(--white);
       font-size: 18px;
       line-height: 1.65;
-      margin: 25px 0;
+      margin: 0;
+      padding: 0 25px 0 0;
       width: 100%;
     }
   }
