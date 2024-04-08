@@ -131,10 +131,14 @@
       align-self: end;
       font-size: 1.5rem;
       line-height: 1.25;
-      padding: 35px 25px 50px 0;
+      padding: 25px 25px 0px 0;
       position: relative;
       text-align: left;
       width: 50%;
+
+      &:last-of-type {
+        padding: 25px 25px 60px 0;
+      }
     }
   }
 

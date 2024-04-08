@@ -116,7 +116,7 @@
     // border: thin solid var(--offwhite);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     margin: 75px auto;
     position: relative;
     width: 80%;
@@ -126,16 +126,16 @@
     }
 
     @media (min-width: 1024px) {
-      margin: 85px auto;
       width: 80%;
     }
 
     &_wrapper {
-      text-align: center;
+      // border: thin solid red;
+      // text-align: center;
       width: 100%;
 
       @media (min-width: 1280px) {
-        width: 55%;
+        width: 60%;
       }
     }
     
@@ -155,7 +155,7 @@
 
       @media (min-width: 768px) {
         font-size: 18px;
-        margin: 25px auto;
+        margin: 25px 0;
         padding: 15px 0;
         width: 175px;
       }
@@ -163,13 +163,10 @@
     
     &_copy {
       color: var(--offwhite);
-      font-size: 24px;
+      font-size: 18px;
       line-height: 1.65;
+      margin: 25px 0;
       width: 100%;
-
-      @media (min-width: 768px) {
-        font-size: 28px;
-      }
     }
   }
 }
