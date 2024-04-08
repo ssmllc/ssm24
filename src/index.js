@@ -46,20 +46,6 @@ ScrollSmoother.create({
       yPercent: -20,
     });
   });
-  
-  // mm.add("(min-width: 1900px)", () => {
-  //   gsap.to(".ssm-parallax", {
-  //     scrollTrigger: {
-  //       trigger: ".ssm-parallax",
-  //       // markers: true,
-  //       scrub: true,
-  //       start: 'top bottom',
-  //       ease: 'power1.easeout',
-  //     },
-  //     duration: 5,
-  //     yPercent: -25,
-  //   });
-  // });
 
   getElement('.ssm-exit--menu').addEventListener('click', () => {
     const isOpen = getElement('.ssm-exit--menu').getAttribute('data-active');
