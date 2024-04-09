@@ -31,6 +31,11 @@
     @media (min-width: 1280px) {
       margin: 20% auto 0;
     }
+    
+    @media (min-width: 1900px) {
+      margin: 15% auto 0;
+      width: 55%;
+    }
 
     &_text {
       @include EuropaBold;
@@ -128,7 +133,13 @@
     }
     
     @media (min-width: 1280px) {
+      padding: 0 25px 0 0;
       width: 65%;
+    }
+    
+    @media (min-width: 1900px) {
+      padding: 25px 25px 50px 0;
+      width: 55%;
     }
 
     &_wrapper {
@@ -151,7 +162,7 @@
       font-size: 16px;
       justify-content: center;
       letter-spacing: 2px;
-      margin: 20px 0;
+      margin: 0;
       padding: 10px 0;
       text-transform: uppercase;
       width: 150px;
@@ -176,8 +187,14 @@
       font-size: 18px;
       line-height: 1.65;
       margin: 0;
-      padding: 0 25px 0 0;
+      padding: 25px 0 0 0;
       width: 100%;
+
+      @media (min-width: 1280px) {
+        font-size: 18px;
+        margin: 0 0 10px 0;
+        padding: 0 25px 0 0;
+      }
     }
   }
 }
