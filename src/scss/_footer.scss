@@ -18,6 +18,10 @@
     height: 50vh;
   }
   
+  @media (min-width: 1680px) {
+    height: 37vh;
+  }
+  
   @media (min-width: 1900px) {
     height: 55vh;
   }
