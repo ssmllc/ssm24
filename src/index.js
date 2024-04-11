@@ -72,11 +72,6 @@ ScrollSmoother.create({
   });
 
   const inputTextFields = getAllElements('.ssm-contact--input_textbox');
-  // const submitButton = document.getElementById('submitbutton');
-  // const contactName = getElement("#contact_name");
-  // const contactEmail = getElement("#contact_email");
-  // const contactTelephone = getElement("#contact_telephone");
-  // const contactMessage = getElement("#message");
 
   let errorFields = [];
 
@@ -94,12 +89,6 @@ ScrollSmoother.create({
           console.log('newFields', errorFields);
         }
       }
-
-      // if ((contactName.value !== '' && contactEmail.value !== '' && contactTelephone.value !== '' && contactMessage.value !== '') && errorFields.length <= 0) {
-      //   submitButton.setAttribute('disabled', 'false');
-      // } else {
-      //   submitButton.setAttribute('disabled', 'true');
-      // }
     });
   });
 })();
