@@ -237,7 +237,10 @@
   }
 
   &--item {
-    border: thin solid var(--black);
+    background: 
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(180deg, var(--offwhite), var(--black), var(--offwhite)) border-box;
+    border: 1px solid transparent;
     border-radius: 25px;
     padding: 25px 25px;
 
@@ -265,27 +268,27 @@
   }
 
   &--icon {
-    height: 100px;
+    height: 80px;
     position: relative;
-    width: 100px;
+    width: 80px;
 
     &_svg {
       left: 50%;
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       z-index: 2;
     }
     
     &_blob {
-      height: 100px;
+      height: 80px;
       left: 50%;
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 100px;
+      width: 80px;
       z-index: 1;
     }
   }

@@ -41,10 +41,11 @@
   }
 
   &--contact {
+    // border: thin solid red;
     // align-self: center;
     color: var(--white);
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin: 70px auto 25px;
     padding: 0;
     position: relative;
@@ -58,7 +59,7 @@
     
     @media (min-width: 1280px) {
       flex-direction: row;
-      width: 65%;
+      width: 75%;
     }
     
     @media (min-width: 1900px) {
@@ -84,7 +85,8 @@
 
       @media (min-width: 1280px) {
         margin: 0;
-        padding-left: 15%;
+        padding: 0 5%;
+        width: 80%;
       }
     }
 
@@ -114,13 +116,9 @@
         }
       }
 
-      @media (min-width: 1024px) {
-        // align-self: center;
-      }
-
       @media (min-width: 1280px) {
         margin: 0;
-        width: 30%;
+        width: 25%;
       }
     }
     
@@ -196,6 +194,16 @@
           padding: 25px 0 0;
         }
       }
+    }
+  }
+
+  &--badges {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: 1280px) {
+      width: 15%;
     }
   }
 }
