@@ -3,6 +3,8 @@
   border-radius: 100px 100px 0 0;
   bottom: 15vh;
   display: flex;
+  flex-direction: column;
+  // height: 75vh;
   justify-content: center;
   overflow: hidden;
   position: relative;
@@ -14,17 +16,17 @@
     bottom: 10vh;
   }
 
-  @media (min-width: 1280px) {
-    height: 50vh;
-  }
+  // @media (min-width: 1280px) {
+  //   height: 50vh;
+  // }
   
-  @media (min-width: 1680px) {
-    height: 37vh;
-  }
+  // @media (min-width: 1680px) {
+  //   height: 37vh;
+  // }
   
-  @media (min-width: 1900px) {
-    height: 55vh;
-  }
+  // @media (min-width: 1900px) {
+  //   height: 55vh;
+  // }
 
   &::after {
     // outline: 10px solid red;
@@ -64,7 +66,7 @@
     
     @media (min-width: 1900px) {
       flex-direction: row;
-      margin: 100px auto 25px;
+      margin: 100px auto 0;
       width: 55%;
     }
 
@@ -198,12 +200,20 @@
   }
 
   &--badges {
+    align-items: center;
     display: flex;
+    flex-direction: column;
+    gap: 50px 0;
     justify-content: center;
+    padding-bottom: 10%;
+    position: relative;
     width: 100%;
+    z-index: 1;
 
     @media (min-width: 1280px) {
-      width: 15%;
+      flex-direction: row;
+      padding-bottom: 15%;
+      gap: 0 50px;
     }
   }
 }
